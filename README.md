@@ -23,21 +23,22 @@ cd core-einstein
 docker compose up
 ```
 
-Then open:
+Once it says the containers are up, open these in your browser
+(**these are local addresses — they only work on the machine where you ran `docker compose up`**):
 
-| What        | URL                        |
-|-------------|----------------------------|
-| Website     | http://localhost:8080      |
-| Admin panel | http://localhost:8080/admin/ |
-| phpMyAdmin  | http://localhost:8081      |
+| What        | Local address                  |
+|-------------|--------------------------------|
+| Website     | `http://localhost:8090`        |
+| Admin panel | `http://localhost:8090/admin/` |
+| phpMyAdmin  | `http://localhost:8091`        |
 
 The database is created and seeded automatically on first start. Stop with `Ctrl+C`;
 run `docker compose down -v` to wipe the database and start fresh.
 
-If port 8080 or 8081 is already in use on your machine, pick different ones:
+If port 8090 or 8091 is already in use on your machine, pick different ones:
 
 ```bash
-WEB_PORT=8090 PMA_PORT=8091 docker compose up
+WEB_PORT=8095 PMA_PORT=8096 docker compose up
 ```
 
 ### Option B — XAMPP (Windows / macOS / Linux)
