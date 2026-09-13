@@ -4,7 +4,14 @@ A tourism destination browsing and enquiry portal built with **PHP 8 + MySQL + B
 Visitors can browse destinations and packages, save a wishlist, and send enquiries.
 Admins can manage destinations, users, and enquiries from a separate panel.
 
-## Run it (choose one)
+## 🌐 Live demo
+
+**https://web-production-37f7b.up.railway.app** — no setup needed, just open it.
+
+- User site: https://web-production-37f7b.up.railway.app/
+- Admin panel: https://web-production-37f7b.up.railway.app/admin/ (login `rahulsk` / `1234`)
+
+## Run it locally (choose one)
 
 ### Option A — Docker (one command, works anywhere)
 
