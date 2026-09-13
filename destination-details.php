@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_enquiry'])) {
     <div id="destCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active" style="height: 600px;">
-                <img src="images/<?php echo $dest['image_main']; ?>" class="d-block w-100 h-100 object-fit-cover" alt="..." onerror="this.src='https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?w=1600&q=80'">
+                <img src="<?php echo htmlspecialchars(image_url($dest['image_main'])); ?>" class="d-block w-100 h-100 object-fit-cover" alt="..." onerror="this.src='https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?w=1600&q=80'">
                 <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-4">
                     <h1 class="display-3 fw-bold"><?php echo $dest['title']; ?></h1>
                     <p class="lead"><?php echo $dest['country']; ?></p>

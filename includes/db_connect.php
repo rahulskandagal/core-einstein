@@ -22,6 +22,13 @@ try {
     $conn = null; 
 }
 
+// Resolve a destination image: full URLs are used as-is, bare filenames are
+// served from the local images/ folder ($prefix lets admin pages use ../images/).
+function image_url($file, $prefix = "images/") {
+    if (preg_match('#^https?://#i', (string)$file)) return $file;
+    return $prefix . $file;
+}
+
 // Function to clean input data to prevent SQL injection (basic layer)
 function clean_input($data, $conn) {
     if ($data === null) return "";

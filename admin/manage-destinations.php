@@ -79,7 +79,7 @@ $result = $conn->query($sql);
                             <?php while($row = $result->fetch_assoc()): ?>
                                 <tr>
                                     <td class="ps-4">
-                                        <img src="../images/<?php echo $row['image_main']; ?>" class="rounded-3" width="60" height="40" style="object-fit:cover;" onerror="this.src='https://via.placeholder.com/60x40'">
+                                        <img src="<?php echo htmlspecialchars(image_url($row['image_main'], '../images/')); ?>" class="rounded-3" width="60" height="40" style="object-fit:cover;" onerror="this.src='https://via.placeholder.com/60x40'">
                                     </td>
                                     <td><div class="fw-bold"><?php echo $row['title']; ?></div></td>
                                     <td><?php echo $row['category']; ?></td>

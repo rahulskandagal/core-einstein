@@ -80,7 +80,7 @@ $cat_result = $conn->query($cat_sql);
                         <div class="col-lg-4 col-md-6 reveal">
                             <div class="card dest-card h-100">
                                 <div class="dest-img-wrapper">
-                                    <img src="images/<?php echo $row['image_main']; ?>" class="dest-img" alt="<?php echo $row['title']; ?>" onerror="this.src='https://loremflickr.com/600/400/travel,<?php echo strtolower($row['category']); ?>,<?php echo strtolower($row['country']); ?>?random=<?php echo $row['id']; ?>'">
+                                    <img src="<?php echo htmlspecialchars(image_url($row['image_main'])); ?>" class="dest-img" alt="<?php echo $row['title']; ?>" onerror="this.src='https://loremflickr.com/600/400/travel,<?php echo strtolower($row['category']); ?>,<?php echo strtolower($row['country']); ?>?random=<?php echo $row['id']; ?>'">
                                     <div class="dest-overlay">
                                         <span class="badge-glass"><?php echo $row['category']; ?></span>
                                     </div>
