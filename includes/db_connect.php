@@ -1,13 +1,14 @@
- <?php
+<?php
 /**
  * Database Connection File
  * Tourism Destination Management System
  */
 
-$host = "localhost";
-$username = "root";
-$password = "";
-$dbname = "tourism_db";
+// Reads from environment (Docker) and falls back to XAMPP defaults.
+$host     = getenv("DB_HOST") ?: "localhost";
+$username = getenv("DB_USER") ?: "root";
+$password = getenv("DB_PASS") ?: "";
+$dbname   = getenv("DB_NAME") ?: "tourism_db";
 
 $db_error = false;
 try {

@@ -5,6 +5,9 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET TIME_ZONE = "+00:00";
 
+CREATE DATABASE IF NOT EXISTS `tourism_db` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `tourism_db`;
+
 -- --------------------------------------------------------
 
 -- Table structure for table `admins`
@@ -19,7 +22,7 @@ CREATE TABLE `admins` (
 
 -- Dumping sample admin (username: rahulsk, password: 1234)
 INSERT INTO `admins` (`username`, `password`, `email`) VALUES
-('rahulsk', '$2y$10$Y10S7OqD7YfJt0n76EwX.uGZ2M5Q6O.P.v8v8v8v8v8v8v8v8v8v8', 'rahulskandagalpc@gmail.com');
+('rahulsk', '$2y$10$ez3jK1q9crRF3TEC5sSLH.XknmwuH.BaqjBBiGXbly3MTZ1rehuR6', 'rahulskandagalpc@gmail.com');
 
 -- --------------------------------------------------------
 
