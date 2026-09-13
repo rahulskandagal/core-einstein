@@ -32,12 +32,16 @@
                             <li><a class="dropdown-item" href="profile.php">My Profile</a></li>
                             <li><a class="dropdown-item" href="wishlist.php">Wishlist</a></li>
                             <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="admin/<?php echo isset($_SESSION['admin_id']) ? 'index.php' : 'login.php'; ?>"><i class="fas fa-user-shield me-1"></i> Switch to Admin</a></li>
                             <li><a class="dropdown-item text-danger" href="logout.php">Logout</a></li>
                         </ul>
                     </li>
                 <?php else: ?>
                     <li class="nav-item ms-lg-3">
                         <a class="btn btn-primary-custom" href="login.php">Login / Register</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="nav-link" href="admin/<?php echo isset($_SESSION['admin_id']) ? 'index.php' : 'login.php'; ?>" title="Admin dashboard"><i class="fas fa-user-shield me-1"></i> Admin</a>
                     </li>
                 <?php endif; ?>
             </ul>

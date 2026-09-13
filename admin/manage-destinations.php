@@ -42,6 +42,7 @@ $result = $conn->query($sql);
             <a href="#" class="nav-admin-link"><i class="fas fa-images me-2"></i> Manage Gallery</a>
             <a href="#" class="nav-admin-link"><i class="fas fa-cog me-2"></i> Site Settings</a>
             <hr class="border-secondary opacity-25">
+            <a href="../index.php" class="nav-admin-link"><i class="fas fa-exchange-alt me-2"></i> Switch to User Site</a>
             <a href="logout.php" class="nav-admin-link text-danger"><i class="fas fa-sign-out-alt me-2"></i> Logout</a>
         </nav>
     </div>

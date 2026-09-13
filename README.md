@@ -52,6 +52,20 @@ WEB_PORT=8090 PMA_PORT=8091 docker compose up
 No config changes are needed — `includes/db_connect.php` defaults to XAMPP's `root` user with an empty password.
 To use different credentials, set the `DB_HOST`, `DB_USER`, `DB_PASS`, `DB_NAME` environment variables.
 
+## Two dashboards — User and Admin
+
+The app has two separate logins and you can switch between them from the UI:
+
+| Dashboard | Who        | Login page      | What you can do                                                    |
+|-----------|------------|-----------------|--------------------------------------------------------------------|
+| **User**  | travellers | `/login.php`    | browse destinations & packages, save a wishlist, send enquiries, edit profile |
+| **Admin** | site owner | `/admin/login.php` | add/edit/delete destinations, view & respond to enquiries, manage users |
+
+- **User → Admin:** click **Admin** in the top navbar (or **Switch to Admin** in the user dropdown when logged in).
+- **Admin → User:** click **Switch to User Site** in the admin sidebar.
+
+User and admin sessions are independent, so you can be logged into both at the same time and hop back and forth.
+
 ## Demo logins
 
 | Role  | Where                      | Username / Email | Password |
