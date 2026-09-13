@@ -8,4 +8,4 @@ COPY docker/protect.conf /etc/apache2/conf-enabled/protect.conf
 RUN chmod +x /var/www/html/docker/entrypoint.sh
 
 EXPOSE 80
-ENTRYPOINT ["/var/www/html/docker/entrypoint.sh"]
+ENTRYPOINT ["sh", "/var/www/html/docker/entrypoint.sh"]
